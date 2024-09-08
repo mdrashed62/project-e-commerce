@@ -35,7 +35,7 @@ const Banner = () => {
                 className="mySwiper text-white bg-black"
             >
                 <SwiperSlide>
-                    <div className='flex flex-col md:flex-row md:justify-around items-center min-h-[450px] gap-4'>
+                    <div className='flex flex-col-reverse md:flex-row md:justify-around items-center min-h-[450px] gap-4'>
                         <div className='flex flex-col justify-center p-4'>
                             <h4 className="text-xl flex items-center gap-3"><FaApple className='md:text-4xl text-2xl' /> iphone 124 series</h4>
                             <h2 className="text-2xl md:text-5xl font-bold my-6 md:my-8">Up to 10% <br /> off Voucher</h2>
@@ -49,7 +49,7 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='flex flex-col md:flex-row md:justify-around items-center min-h-[450px] gap-4'>
+                    <div className='flex flex-col-reverse md:flex-row md:justify-around items-center min-h-[450px] gap-4'>
                         <div className='flex flex-col justify-center p-4'>
                             <h4 className="text-xl flex items-center gap-3"><FaApple className='md:text-4xl text-2xl' /> Vote Speaker</h4>
                             <h2 className="text-2xl md:text-5xl font-bold my-6 md:my-8">Up to 10% <br /> off Voucher</h2>
@@ -58,12 +58,12 @@ const Banner = () => {
                             </div>
                         </div>
                         <div className='p-4'>
-                            <Image src={Banner2} alt='Banner Image' width={350}></Image>
+                            <Image src={Banner2} alt='Banner Image' width={300}></Image>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='flex flex-col md:flex-row md:justify-around items-center min-h-[450px] gap-4'>
+                    <div className='flex flex-col-reverse md:flex-row md:justify-around items-center min-h-[450px] gap-4'>
                         <div className='flex flex-col justify-center p-4'>
                             <h4 className="text-xl flex items-center gap-3"><FaApple className='md:text-4xl text-2xl' /> Camera Cannon series</h4>
                             <h2 className="text-2xl md:text-5xl font-bold my-6 md:my-8">Up to 10% <br /> off Voucher</h2>
@@ -72,12 +72,12 @@ const Banner = () => {
                             </div>
                         </div>
                         <div className='p-4'>
-                            <Image src={Banner3} alt='Banner Image' width={300}></Image>
+                            <Image src={Banner3} alt='Banner Image' width={200}></Image>
                         </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='flex flex-col md:flex-row md:justify-around items-center min-h-[450px] gap-4'>
+                    <div className='flex flex-col-reverse md:flex-row md:justify-around items-center min-h-[450px] gap-4'>
                         <div className='flex flex-col justify-center p-4'>
                             <h4 className="text-xl flex items-center gap-3"><FaApple className='md:text-4xl text-2xl' /> small speaker series</h4>
                             <h2 className="text-2xl md:text-5xl font-bold my-6 md:my-8">Up to 10% <br /> off Voucher</h2>
@@ -91,7 +91,7 @@ const Banner = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='flex flex-col md:flex-row md:justify-around items-center min-h-[450px] gap-4'>
+                    <div className='flex flex-col-reverse md:flex-row md:justify-around items-center min-h-[450px] gap-4'>
                         <div className='flex flex-col justify-center p-4'>
                             <h4 className="text-xl flex items-center gap-3"><FaApple className='md:text-4xl text-2xl' /> perfume</h4>
                             <h2 className="text-2xl md:text-5xl font-bold my-6 md:my-8">Up to 10% <br /> off Voucher</h2>
