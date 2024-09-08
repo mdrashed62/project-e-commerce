@@ -2,14 +2,13 @@ import React from 'react';
 import { TbTruckDelivery } from "react-icons/tb";
 import { TfiHeadphoneAlt } from "react-icons/tfi";
 import { AiOutlineSafetyCertificate } from "react-icons/ai";
-import Button from '../shared/Button';
-import SectionHeading from '../shared/SectionHeading';
+
 
 
 const Features = () => {
     return (
         <>
-            <div className='w-8/12 mx-auto grid grid-cols-1 lg:grid-cols-3 gap-5'>
+            <div className='lg:w-8/12 mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 my-24'>
                 <div className='flex flex-col items-center justify-center gap-3'>
                     <div className='w-[80px] h-[80px] rounded-full bg-gray-400/50 flex justify-center items-center'>
                         <div className='w-[60px] h-[60px] rounded-full bg-black flex justify-center items-center'>
