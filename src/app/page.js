@@ -1,11 +1,11 @@
-import Banner from "@/components/home/Banner";
 
+import Banner from "../components/home/Banner";
 
 export default function Home() {
   return (
     <div>
       <main>
-        <Banner />
+        <Banner></Banner>
       </main>
     </div>
   );
