@@ -3,7 +3,7 @@ import React from 'react';
 const Banner = () => {
     return (
         <div>
-            <h1>This is Banner</h1>
+            <h1>This is Banner made by tufazzul</h1>
         </div>
     );
 };
