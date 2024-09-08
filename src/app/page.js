@@ -1,4 +1,5 @@
 
+import Features from "@/components/features/Features";
 import Banner from "../components/home/Banner";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div>
       <main>
         <Banner></Banner>
+        <Features />
       </main>
     </div>
   );
