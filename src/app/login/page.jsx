@@ -10,8 +10,8 @@ const Page = () => {
 
     const router = useRouter();
 
-    const searchParams = useSearchParams();
-    const path = searchParams.get('redirect')
+    // const searchParams = useSearchParams();
+    // const path = searchParams.get('redirect')
 
     const handleLogin = async e => {
         e.preventDefault();
