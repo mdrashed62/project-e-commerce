@@ -18,6 +18,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import { FaShoppingCart } from "react-icons/fa";
 import Link from "next/link";
+import { signOut, useSession } from "next-auth/react";
 
 
 const Search = styled("div")(({ theme }) => ({
@@ -60,6 +61,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const Navbar = () => {
+
+  const session = useSession();
+  console.log(session);
+
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedPage, setSelectedPage] = useState("/");
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -211,11 +216,10 @@ const Navbar = () => {
             <li>
               <Link href="/" passHref>
                 <span
-                  className={`px-4 py-2 rounded ${
-                    selectedPage === "/"
-                      ? "bg-gray-500 text-white"
-                      : "text-black"
-                  }`}
+                  className={`px-4 py-2 rounded ${selectedPage === "/"
+                    ? "bg-gray-500 text-white"
+                    : "text-black"
+                    }`}
                   onClick={() => setSelectedPage("/")}
                 >
                   Home
@@ -225,11 +229,10 @@ const Navbar = () => {
             <li>
               <Link href="/contact" passHref>
                 <span
-                  className={`px-4 py-2 rounded ${
-                    selectedPage === "/contact"
-                      ? "bg-gray-500 text-white"
-                      : "text-black"
-                  }`}
+                  className={`px-4 py-2 rounded ${selectedPage === "/contact"
+                    ? "bg-gray-500 text-white"
+                    : "text-black"
+                    }`}
                   onClick={() => setSelectedPage("/contact")}
                 >
                   Contact
@@ -239,11 +242,10 @@ const Navbar = () => {
             <li>
               <Link href="/about" passHref>
                 <span
-                  className={`px-4 py-2 rounded ${
-                    selectedPage === "/about"
-                      ? "bg-gray-500 text-white"
-                      : "text-black"
-                  }`}
+                  className={`px-4 py-2 rounded ${selectedPage === "/about"
+                    ? "bg-gray-500 text-white"
+                    : "text-black"
+                    }`}
                   onClick={() => setSelectedPage("/about")}
                 >
                   About
@@ -251,18 +253,19 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/signup" passHref>
-                <span
-                  className={`px-4 py-2 rounded ${
-                    selectedPage === "/signup"
+              {!session.data ?
+                <Link href="/login" passHref>
+                  <span
+                    className={`px-4 py-2 rounded ${selectedPage === "/login"
                       ? "bg-gray-500 text-white"
                       : "text-black"
-                  }`}
-                  onClick={() => setSelectedPage("/signup")}
-                >
-                  Sign-Up
-                </span>
-              </Link>
+                      }`}
+                    onClick={() => setSelectedPage("/login")}
+                  >
+                    Sign-In
+                  </span>
+                </Link> :
+                <button className='btn btn-primary btn-outline' onClick={() => signOut()}>Log-Out</button>}
             </li>
           </ul>
           <Box sx={{ flexGrow: 1 }} />
