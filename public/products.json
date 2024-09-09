@@ -1,0 +1,99 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co/31QsXzG/camera.png",
+      "title": "High-Resolution Camera",
+      "description": "Capture stunning photos with this high-quality camera.",
+      "price": 299.99,
+      "rating": 4.8
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co/k9DHRFk/chair.png",
+      "title": "Ergonomic Office Chair",
+      "description": "Stay comfortable all day with this ergonomic chair.",
+      "price": 149.99,
+      "rating": 4.5
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co/7YPFHLN/cooler.png",
+      "title": "Portable Air Cooler",
+      "description": "Keep cool during hot days with this portable cooler.",
+      "price": 79.99,
+      "rating": 4.6
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co/jgT0D9L/gaming-console.png",
+      "title": "Gaming Console",
+      "description": "Experience next-gen gaming with this powerful console.",
+      "price": 499.99,
+      "rating": 4.9
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co/Sr87z8w/jacket.png",
+      "title": "Winter Jacket",
+      "description": "Stay warm and stylish with this insulated winter jacket.",
+      "price": 199.99,
+      "rating": 4.7
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co/Dz7pJDX/keyboard.png",
+      "title": "Mechanical Keyboard",
+      "description": "Enhance your typing experience with this mechanical keyboard.",
+      "price": 89.99,
+      "rating": 4.8
+    },
+    {
+      "id": 7,
+      "image": "https://i.ibb.co/QbDJHw8/laptop.png",
+      "title": "High-Performance Laptop",
+      "description": "Boost productivity with this high-performance laptop.",
+      "price": 999.99,
+      "rating": 4.9
+    },
+    {
+      "id": 8,
+      "image": "https://i.ibb.co/kDvxH92/perfuim.png",
+      "title": "Luxury Perfume",
+      "description": "Feel confident with this exquisite luxury perfume.",
+      "price": 59.99,
+      "rating": 4.6
+    },
+    {
+      "id": 9,
+      "image": "https://i.ibb.co/Swkpj7B/shoes.png",
+      "title": "Running Shoes",
+      "description": "Stay comfortable and stylish while running with these shoes.",
+      "price": 129.99,
+      "rating": 4.7
+    },
+    {
+      "id": 10,
+      "image": "https://i.ibb.co/ynf5Vpj/soud-sytem.png",
+      "title": "Surround Sound System",
+      "description": "Enjoy immersive sound with this high-quality surround system.",
+      "price": 299.99,
+      "rating": 4.8
+    },
+    {
+      "id": 11,
+      "image": "https://i.ibb.co/6wz6VYy/toy-car.png",
+      "title": "Remote Control Toy Car",
+      "description": "Fun for kids and adults alike with this remote-controlled car.",
+      "price": 49.99,
+      "rating": 4.5
+    },
+    {
+      "id": 12,
+      "image": "https://i.ibb.co/VYSbPJ2/bag.png",
+      "title": "Travel Backpack",
+      "description": "Carry your essentials in style with this durable backpack.",
+      "price": 89.99,
+      "rating": 4.6
+    }
+  ]
+  
