@@ -2,6 +2,7 @@
 import Features from "@/components/features/Features";
 import SecondBanner from "@/components/home/SecondBanner";
 import Banner from "../components/home/Banner";
+// import Arrival from "@/components/arrival/Arrival";
 import Products from "@/components/products/products";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
         <Banner></Banner>
         <Products></Products>
         <SecondBanner></SecondBanner>
+        {/* <Arrival/> */}
         <Features />
       </main>
     </div>
