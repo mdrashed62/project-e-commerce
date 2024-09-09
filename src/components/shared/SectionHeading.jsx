@@ -7,7 +7,7 @@ const SectionHeading = ({heading, subHeading}) => {
                 <span className='w-[20px] h-[40px] bg-[#DB4444] rounded-sm'></span>
                 <h3 className='text-[#DB4444] font-bold text-sm'>{subHeading}</h3>
             </div>
-            <h1 className='text-4xl font-semibold'>{heading}</h1>
+            <h1 className='text-xl md:text-2xl lg:text-4xl font-bold'>{heading}</h1>
         </div>
     );
 };
