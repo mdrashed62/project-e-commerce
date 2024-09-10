@@ -1,8 +1,40 @@
+"use client"
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter, useSearchParams } from 'next/navigation';
 import React from 'react';
+import { signIn } from 'next-auth/react';
 
-const page = () => {
+const Page = () => {
+
+    const router = useRouter();
+
+    const searchParams = useSearchParams();
+    const path = searchParams.get('redirect')
+
+    const handleLogin = async e => {
+        e.preventDefault();
+
+        const form = e.target;
+
+        const email = form.email.value;
+        const password = form.password.value;
+
+        const res = await signIn("credentials", {
+            email,
+            password,
+            redirect : false,
+            // callbackUrl : path ? path : '/'
+        })
+
+
+        if(res.status === 200){
+            router.push('/')
+        }
+
+    }
+
     return (
         <div className='flex justify-center items-center'>
             <div className='hidden lg:block w-1/2'>
@@ -14,13 +46,13 @@ const page = () => {
                     <p className='font-medium'>Enter your details below</p>
                 </div>
 
-                <form className='space-y-8'>
+                <form onSubmit={handleLogin} className='space-y-8'>
                     <input
                         className='border-b border-[#00000066] focus:outline-none focus:border-b focus:ring-0 w-full p-2'
-                        type="email" placeholder='Email' />
+                        type="email" placeholder='Email' name='email' />
                     <input
                         className='border-b border-[#00000066] focus:outline-none focus:border-b focus:ring-0 w-full p-2'
-                        type="password" placeholder='Password' />
+                        type="password" placeholder='Password' name='password' />
 
                     <div className='flex items-center justify-between'>
                         <input
@@ -39,4 +71,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;
