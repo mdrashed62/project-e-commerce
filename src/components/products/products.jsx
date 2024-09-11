@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
+import SectionHeading from "../shared/SectionHeading";
+import { IoArrowBack, IoArrowForward } from "react-icons/io5";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -20,10 +22,17 @@ const Products = () => {
 
   return (
     <div className="container mx-auto py-20">
-        <div className='space-y-3'>
-            <p className='text-green-700 font-bold mb-10'>Today</p>
-            <h2 className="text-2xl text-red-600 font-bold md:text-5xl">Flash Sales</h2>
-        </div>
+       <div className='flex justify-between items-center'>
+                <SectionHeading heading={'Explore Our Products'} subHeading={`Our Products`}></SectionHeading>
+                <div className='flex items-center gap-2'>
+                    <button className='bg-[#f5f2f2] rounded-full w-12 h-12'>
+                        <IoArrowBack className='text-2xl mx-auto' />
+                    </button>
+                    <button className='bg-[#f5f2f2] rounded-full w-12 h-12'>
+                        <IoArrowForward className='text-2xl mx-auto' />
+                    </button>
+                </div>
+            </div>
      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-10">
       {products.map((product) => (
         <ProductCard

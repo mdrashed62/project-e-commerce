@@ -1,312 +1,195 @@
-"use client";
+"use client"; // Add this line to make the component a Client Component
 
-import React, { useState } from "react";
-import { styled, alpha } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import InputBase from "@mui/material/InputBase";
-import Badge from "@mui/material/Badge";
-import MenuItem from "@mui/material/MenuItem";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
-import AccountCircle from "@mui/icons-material/AccountCircle";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import MoreIcon from "@mui/icons-material/MoreVert";
-import { FaShoppingCart } from "react-icons/fa";
+import { useSession } from "next-auth/react";
+import Image from "next/image";
 import Link from "next/link";
-import { signOut, useSession } from "next-auth/react";
-
-
-const Search = styled("div")(({ theme }) => ({
-  position: "relative",
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
-  "&:hover": {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
-  },
-  marginRight: theme.spacing(2),
-  marginLeft: 0,
-  width: "100%",
-  [theme.breakpoints.up("sm")]: {
-    marginLeft: theme.spacing(3),
-    width: "auto",
-  },
-}));
-
-const SearchIconWrapper = styled("div")(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: "100%",
-  position: "absolute",
-  pointerEvents: "none",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: "inherit",
-  "& .MuiInputBase-input": {
-    padding: theme.spacing(1, 1, 1, 0),
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create("width"),
-    width: "100%",
-    [theme.breakpoints.up("md")]: {
-      width: "20ch",
-    },
-  },
-}));
+import { usePathname } from "next/navigation";
+import React from "react";
+import {
+  FaList,
+  FaRegHeart,
+  FaRegUser,
+  FaSearch,
+  FaTimesCircle,
+} from "react-icons/fa";
+import {
+  FaArrowRightFromBracket,
+  FaCartShopping,
+  FaStarHalfStroke,
+} from "react-icons/fa6";
 
 const Navbar = () => {
-
+  const pathname = usePathname();
   const session = useSession();
   console.log(session);
 
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [selectedPage, setSelectedPage] = useState("/");
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
-  const [menuAnchorEl, setMenuAnchorEl] = React.useState(null);
-
-  const isMenuOpen = Boolean(anchorEl);
-  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-  const isDropdownMenuOpen = Boolean(menuAnchorEl);
-
-  const handleProfileMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleMobileMenuClose = () => {
-    setMobileMoreAnchorEl(null);
-  };
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-    handleMobileMenuClose();
-  };
-
-  const handleMobileMenuOpen = (event) => {
-    setMobileMoreAnchorEl(event.currentTarget);
-  };
-
-  const handleDropdownMenuOpen = (event) => {
-    setMenuAnchorEl(event.currentTarget);
-  };
-
-  const handleDropdownMenuClose = () => {
-    setMenuAnchorEl(null);
-  };
-
-  const handleDropdownToggle = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
-
-  const menuId = "primary-search-account-menu";
-  const mobileMenuId = "primary-search-account-menu-mobile";
-
-  const renderMenu = (
-    <Menu
-      anchorEl={anchorEl}
-      anchorOrigin={{ vertical: "top", horizontal: "right" }}
-      id={menuId}
-      keepMounted
-      transformOrigin={{ vertical: "top", horizontal: "right" }}
-      open={isMenuOpen}
-      onClose={handleMenuClose}
-    >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-    </Menu>
-  );
-
-  const renderMobileMenu = (
-    <Menu
-      anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{ vertical: "top", horizontal: "right" }}
-      id={mobileMenuId}
-      keepMounted
-      transformOrigin={{ vertical: "top", horizontal: "right" }}
-      open={isMobileMenuOpen}
-      onClose={handleMobileMenuClose}
-    >
-      <MenuItem>
-        <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit"
-        >
-          <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
-      </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          size="large"
-          aria-label="account of current user"
-          aria-controls={menuId}
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        <p>Profile</p>
-      </MenuItem>
-    </Menu>
-  );
-
-  const renderDropdownMenu = (
-    <Menu
-      anchorEl={menuAnchorEl}
-      anchorOrigin={{ vertical: "top", horizontal: "left" }}
-      keepMounted
-      transformOrigin={{ vertical: "top", horizontal: "left" }}
-      open={isDropdownMenuOpen}
-      onClose={handleDropdownMenuClose}
-    >
-      <MenuItem onClick={handleDropdownMenuClose}>Women Fashion</MenuItem>
-      <MenuItem onClick={handleDropdownMenuClose}>Electronics</MenuItem>
-      <MenuItem onClick={handleDropdownMenuClose}>Medicine</MenuItem>
-      <MenuItem onClick={handleDropdownMenuClose}>Women Fashion</MenuItem>
-      <MenuItem onClick={handleDropdownMenuClose}>Electronics</MenuItem>
-      <MenuItem onClick={handleDropdownMenuClose}>Medicine</MenuItem>
-    </Menu>
-  );
+  const navItems = [
+    {
+      title: "Home",
+      path: "/",
+    },
+    {
+      title: "About",
+      path: "/about",
+    },
+    {
+      title: "Contact",
+      path: "/contact",
+    },
+  ];
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar
-        position="static"
-        sx={{ backgroundColor: "#ffffff", color: "#000000" }}
-      >
-        <Toolbar>
-          <Typography
-            className="font-bold"
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: "none", sm: "block" } }}
+    <div>
+      <div className="relative bg-black py-6 flex justify-center items-center">
+        <p className="text-[10px] lg:text-sm text-white font-semibold absolute left-1/2 transform -translate-x-1/2">
+          Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!{" "}
+          <span className="font-semibold text-[12px] lg:text-[15px] ml-2">Shop Now</span>
+        </p>
+
+        {/* Select Dropdown */}
+        <div className="absolute right-7 hidden md:flex items-center space-x-2">
+          <select
+            id="language"
+            name="language"
+            className="bg-black text-white border-none focus:ring-0 focus:outline-none"
           >
-            Trend-Shop
-          </Typography>
-          <Search className="bg-gray-200">
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-            onClick={handleDropdownMenuOpen}
-          >
-            <MenuIcon />
-          </IconButton>
-          <ul className="flex space-x-4 items-center">
-            <li>
-              <Link href="/" passHref>
-                <span
-                  className={`px-4 py-2 rounded ${selectedPage === "/"
-                    ? "bg-gray-500 text-white"
-                    : "text-black"
-                    }`}
-                  onClick={() => setSelectedPage("/")}
-                >
-                  Home
-                </span>
+            <option value="english">English</option>
+            <option value="bangla">Bangla</option>
+            <option value="hindi">Hindi</option>
+          </select>
+        </div>
+      </div>
+
+      {/* second nav */}
+      <div className="navbar bg-base-100">
+        <div className="navbar-start">
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content bg-gray-200 rounded-md z-[999] mt-3 w-40 p-4 space-y-3 font-semibold text-[16px]"
+            >
+              {navItems.map((item) => (
+                <Link href={item.path} key={item.title}>
+                  <div className="relative">
+                    {item.title}
+                    {pathname === item.path && (
+                      <span className="absolute block w-full h-[2px] bg-gray-400 bottom-0 left-0"></span>
+                    )}
+                  </div>
+                </Link>
+              ))}
+              {!session.data ? <Link href="/login">Sign-In</Link> : ""}
+            </ul>
+          </div>
+          <Image
+            width={100}
+            height={100}
+            alt="Logo of navbar"
+            src="/assets/logo.jpg"
+          />
+        </div>
+        <div className="navbar-center z-50 hidden lg:flex">
+          <ul className="menu menu-horizontal px-1 font-semibold text-[16px] flex items-center gap-8">
+            {navItems.map((item) => (
+              <Link href={item.path} key={item.title}>
+                <div className="relative">
+                  {item.title}
+                  {pathname === item.path && (
+                    <span className="absolute block w-full h-[2px] bg-gray-400 bottom-0 left-0"></span>
+                  )}
+                </div>
               </Link>
-            </li>
-            <li>
-              <Link href="/contact" passHref>
-                <span
-                  className={`px-4 py-2 rounded ${selectedPage === "/contact"
-                    ? "bg-gray-500 text-white"
-                    : "text-black"
-                    }`}
-                  onClick={() => setSelectedPage("/contact")}
-                >
-                  Contact
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" passHref>
-                <span
-                  className={`px-4 py-2 rounded ${selectedPage === "/about"
-                    ? "bg-gray-500 text-white"
-                    : "text-black"
-                    }`}
-                  onClick={() => setSelectedPage("/about")}
-                >
-                  About
-                </span>
-              </Link>
-            </li>
-            <li>
-              {!session.data ?
-                <Link href="/login" passHref>
-                  <span
-                    className={`px-4 py-2 rounded ${selectedPage === "/login"
-                      ? "bg-gray-500 text-white"
-                      : "text-black"
-                      }`}
-                    onClick={() => setSelectedPage("/login")}
-                  >
-                    Sign-in
-                  </span>
-                </Link> :
-                <button className='btn btn-primary btn-outline' onClick={() => signOut()}>Log-Out</button>}
-            </li>
+            ))}
+            {!session.data ? <Link href="/login">Sign-In</Link> : ""}
           </ul>
-          <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
+        </div>
+
+        <div className="navbar-end">
+          <div className="flex items-center mr-4">
+            <input
+              placeholder="Search"
+              className="bg-gray-200 relative px-2 py-[2px] rounded-sm"
+              type="text"
+            />
+            <div className="absolute right-[193px]">
+              <FaSearch />
+            </div>
+          </div>
+          <div className="ml-5">
+            <FaRegHeart className="text-2xl" />
+          </div>
+          <div className="ml-5 mr-5">
+            <FaCartShopping className="text-black w-6 h-6" />
+          </div>
+
+          <div className="dropdown dropdown-end z-50">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar"
             >
-              <FaShoppingCart />
-            </IconButton>
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
+              <div className="w-10 rounded-full">
+                <img
+                  alt="User Profile"
+                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                />
+              </div>
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content bg-base-100 font-semibold space-y-2 rounded-md z-50 mt-3 w-48 p-4 shadow opacity-60"
             >
-              <AccountCircle />
-            </IconButton>
-          </Box>
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </Box>
-        </Toolbar>
-      </AppBar>
-      {renderMobileMenu}
-      {renderMenu}
-      {renderDropdownMenu}
-    </Box>
+              <li>
+                <div>
+                  <FaRegUser />
+                  <p> Manage Account</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <FaList />
+                  <p>My Order</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <FaTimesCircle />
+                  <p>My Cancellations</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <FaStarHalfStroke />
+                  <p>My Reviews</p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <FaArrowRightFromBracket />
+                  <p>Logout</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
