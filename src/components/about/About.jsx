@@ -30,15 +30,30 @@ const About = () => {
         </section>
         {/* another section */}
         <section className='mb-14'>
-            <div className='lg:mx-14'>
-            <Image 
-                    src="/assets/Frame 891.png"  
-                    alt="Side Image"
-                    layout="responsive"
-                    width={1170}
-                    height={230}
-                    className="w-full h-auto"
-                />
+            <div className='lg:mx-14 '>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+            <div  className='space-y-3 hover:bg-[#DB4444] hover:text-white border-[2px] p-7 rounded-md'>
+            <Image className='w-[80px] mx-auto' src="/assets/Services.png" width={80} height={80} alt='service logo'/>
+             <h1 className='text-3xl font-bold text-center'>10.5K</h1>
+             <p className='font-bold opacity-75 text-center'>Sallers Active Our Site</p>
+            </div>
+            <div  className='space-y-3 hover:bg-[#DB4444] hover:text-white border-[2px] p-7 rounded-md'>
+            <Image className='w-[80px] mx-auto' src="/assets/Services (1).png" width={80} height={80} alt='service logo'/>
+             <h1 className='text-3xl font-bold text-center'>10.5K</h1>
+             <p className='font-bold opacity-75 text-center'>Sallers Active Our Site</p>
+            </div>
+            <div  className='space-y-3 hover:bg-[#DB4444] hover:text-white border-[2px] p-7 rounded-md'>
+            <Image className='w-[80px] mx-auto' src="/assets/Services.png" width={80} height={80} alt='service logo'/>
+             <h1 className='text-3xl font-bold text-center'>10.5K</h1>
+             <p className='font-bold opacity-75 text-center'>Sallers Active Our Site</p>
+            </div>
+            <div  className='space-y-3 hover:bg-[#DB4444] hover:text-white border-[2px] p-7 rounded-md'>
+            <Image className='w-[80px] mx-auto' src="/assets/Services.png" width={80} height={80} alt='service logo'/>
+             <h1 className='text-3xl font-bold text-center'>10.5K</h1>
+             <p className='font-bold opacity-75 text-center'>Sallers Active Our Site</p>
+            </div>
+           
+            </div>
             </div>
         </section>
         {/* another section */}
