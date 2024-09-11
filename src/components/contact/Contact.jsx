@@ -1,15 +1,16 @@
 import { LuPhone } from "react-icons/lu";
 import { MdOutlineMail } from "react-icons/md";
 import Button from "../shared/Button";
+import Cart from "../cart/Cart";
 
 const Contact = () => {
     return (
-        <div className="my-16 p-4">
-            <div className="my-10">
+        <div className="my-5 md:my-16 p-4">
+            <div className="my-5 md:my-10">
                 Home / Contact
             </div>
-            <div className="w-[100%] flex gap-5">
-                <div className="flex gap-3 w-[33%] flex-col bg-gray-50 shadow-lg">
+            <div className="w-[100%] flex flex-col md:flex-row gap-5">
+                <div className="flex gap-3 md:w-[33%] flex-col bg-gray-50 shadow-lg">
                     <div className="space-y-2 p-6 border-b-2">
                         <div className="space-y-2">
                             <h3 className="text-xl flex gap-2 items-center font-bold"><span className="bg-red-500 p-3 rounded-full text-white"><LuPhone /> </span>Call To Us</h3>
@@ -17,7 +18,7 @@ const Contact = () => {
                             <p>Phone: +8801611112222</p>
                         </div>
                     </div>
-                    <div className="space-y-2 p-6 bg-gray-50 shadow-lg">
+                    <div className="space-y-2 p-6 bg-gray-50">
                         <div className="space-y-2">
                             <h3 className="text-xl flex gap-2 items-center font-bold"><span className="bg-red-500 p-3 rounded-full text-white"><MdOutlineMail /> </span>Write To Us</h3>
                             <p>Fill out our form and we will contact you within 24 hours.</p>
@@ -26,7 +27,7 @@ const Contact = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-[67%]">
+                <div className="md:w-[67%]">
                     <form>
                         <div className="grid grid-cols-3 gap-3">
                             <input type="text" placeholder="Your Name" className="bg-slate-100 px-3 py-3
@@ -45,7 +46,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-
+            <Cart></Cart>
         </div>
     );
 };
