@@ -262,7 +262,7 @@ const Navbar = () => {
                       }`}
                     onClick={() => setSelectedPage("/login")}
                   >
-                    Sign-In
+                    Sign-in
                   </span>
                 </Link> :
                 <button className='btn btn-primary btn-outline' onClick={() => signOut()}>Log-Out</button>}
