@@ -4,11 +4,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import React from 'react';
-import { signIn } from 'next-auth/react';
+import { signIn, useSession } from 'next-auth/react';
+import { FcGoogle } from "react-icons/fc";
 
 const Page = () => {
 
     const router = useRouter();
+    const session = useSession();
 
     // const searchParams = useSearchParams();
     // const path = searchParams.get('redirect')
@@ -24,15 +26,25 @@ const Page = () => {
         const res = await signIn("credentials", {
             email,
             password,
-            redirect : false,
+            redirect: false,
             // callbackUrl : path ? path : '/'
         })
 
 
-        if(res.status === 200){
+        if (res.status === 200) {
             router.push('/')
         }
 
+    }
+
+
+    const handleGoogle = async (provider) => {
+        const res = await signIn(provider)
+
+    }
+
+    if (session.status === 'authenticated') {
+        router.push('/');
     }
 
     return (
@@ -62,6 +74,10 @@ const Page = () => {
                         <p className='font-semibold text-[#DB4444]'>Forget Password?</p>
                     </div>
                 </form>
+
+                <button
+                    onClick={() => handleGoogle('google')}
+                    className='flex justify-center items-center gap-2 w-full py-3 rounded-sm border border-[#00000066] font-medium'><FcGoogle className='text-2xl' /> Sign up with Google</button>
 
                 <h3 className='text-center text-[#0808089d]'>Have no account?
                     <Link href={'/register'} className='font-semibold mx-1 underline'>Sign Up</Link>
