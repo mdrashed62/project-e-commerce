@@ -1,6 +1,6 @@
 "use client"; // Add this line to make the component a Client Component
 
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -155,7 +155,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content font-semibold space-y-2 rounded-md z-50 mt-3 w-48 p-4 bg-white/40 backdrop-blur-md text-white"
+              className="menu menu-sm dropdown-content font-bold space-y-2 rounded-md z-50 mt-3 w-48 p-4 bg-white/40 backdrop-blur-md text-black"
             >
               <li>
                 <div>
@@ -182,9 +182,17 @@ const Navbar = () => {
                 </div>
               </li>
               <li>
-                <div>
+                <div>  
+                <button
+                    onClick={() =>
+                      signOut({
+                        callbackUrl: "/login",
+                      })
+                    }
+                  >
+                    Logout
+                  </button>
                   <FaArrowRightFromBracket />
-                  <p>Logout</p>
                 </div>
               </li>
             </ul>
