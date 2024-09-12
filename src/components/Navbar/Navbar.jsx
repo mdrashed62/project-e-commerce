@@ -147,9 +147,11 @@ const Navbar = () => {
               className="btn btn-ghost btn-circle avatar"
             >
               <div className="w-10 rounded-full">
-                <img
+                <Image
+                  width={60}
+                  height={60}
                   alt="User Profile"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  src="/assets/Services (3).png"
                 />
               </div>
             </div>
