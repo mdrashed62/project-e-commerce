@@ -39,7 +39,7 @@ const Banner = () => {
                     </li>
                     <li className='group relative'>
                         <Link href={'/'} className='flex justify-between items-center'>
-                            Men's Fashion <MdKeyboardArrowRight />
+                            Mens Fashion <MdKeyboardArrowRight />
                         </Link>
                         <div className='hidden group-hover:block absolute top-full right-0 bg-white z-10'>
                             <ul className='py-2 bg-gray-50 shadow-lg'>
