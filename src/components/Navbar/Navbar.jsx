@@ -43,7 +43,9 @@ const Navbar = () => {
       <div className="relative bg-black py-6 flex justify-center items-center">
         <p className="text-[10px] lg:text-sm text-white font-semibold absolute left-1/2 transform -translate-x-1/2">
           Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!{" "}
-          <span className="font-semibold text-[12px] lg:text-[15px] ml-2">Shop Now</span>
+          <span className="font-semibold text-[12px] lg:text-[15px] ml-2">
+            Shop Now
+          </span>
         </p>
 
         {/* Select Dropdown */}
@@ -124,7 +126,7 @@ const Navbar = () => {
           <div className="flex items-center mr-4">
             <input
               placeholder="Search"
-              className="bg-gray-200 relative px-2 py-[2px] rounded-sm"
+              className="bg-gray-200 relative px-3 py-[6px] rounded-sm"
               type="text"
             />
             <div className="absolute right-[193px]">
@@ -153,12 +155,12 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 font-semibold space-y-2 rounded-md z-50 mt-3 w-48 p-4 shadow opacity-60"
+              className="menu menu-sm dropdown-content font-semibold space-y-2 rounded-md z-50 mt-3 w-48 p-4 bg-white/40 backdrop-blur-md text-white"
             >
               <li>
                 <div>
                   <FaRegUser />
-                  <p> Manage Account</p>
+                  <Link href="/manageAccount">Manage Account</Link>
                 </div>
               </li>
               <li>
