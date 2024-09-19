@@ -19,44 +19,27 @@ import Banner2 from "../../../public/assets/banner2.png"
 import Banner3 from "../../../public/assets/banner3.png"
 import Banner4 from "../../../public/assets/banner4.png"
 import Banner5 from "../../../public/assets/banner5.png"
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const Banner = () => {
+
+    const router = useRouter();
+
+    const handleCategoryClick = (category) => {
+        router.push(`/products?category=${category}`);
+    };
+
+
     return (
         <div className='min-h-[400px] flex flex-col md:flex-row my-6 gap-5'>
             <div className='md:min-w-[250px] p-4'>
                 <ul className='space-y-4'>
-                    <li className='group relative'>
-                        <Link href={'/'} className='flex justify-between items-center'>
-                            Woman’s Fashion <MdKeyboardArrowRight />
-                        </Link>
-                        <div className='hidden group-hover:block absolute top-full right-0 bg-white z-10'>
-                            <ul className='py-2 bg-gray-50 shadow-lg'>
-                                <li className='px-4 py-2 hover:bg-gray-200'>Shirt</li>
-                                <li className='px-4 py-2 hover:bg-gray-200'>Pant</li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li className='group relative'>
-                        <Link href={'/'} className='flex justify-between items-center'>
-                            Mens Fashion <MdKeyboardArrowRight />
-                        </Link>
-                        <div className='hidden group-hover:block absolute top-full right-0 bg-white z-10'>
-                            <ul className='py-2 bg-gray-50 shadow-lg'>
-                                <li className='px-4 py-2 hover:bg-gray-200'>Shirt</li>
-                                <li className='px-4 py-2 hover:bg-gray-200'>Pant</li>
-                            </ul>
-                        </div>
-                    </li>
-
-
-                    <li className='hover:font-bold'><Link href={'/'}>Electronic</Link></li>
-                    <li className='hover:font-bold'><Link href={'/'}>Home & Lifestyle</Link></li>
-                    <li className='hover:font-bold'><Link href={'/'}>Medical</Link></li>
-                    <li className='hover:font-bold'><Link href={'/'}>Sports & Outdoor</Link></li>
-                    <li className='hover:font-bold'><Link href={'/'}>Boys & Toys</Link></li>
-                    <li className='hover:font-bold'><Link href={'/'}>Groceries & Pets</Link></li>
-                    <li className='hover:font-bold'><Link href={'/'}>Helth & Beauty</Link></li>
+                    <li className='hover:font-bold'><button onClick={() => handleCategoryClick('Phone')}>Phone</button></li>
+                    <li className='hover:font-bold'><button onClick={() => handleCategoryClick('Laptop')}>Laptop</button></li>
+                    <li className='hover:font-bold'><button onClick={() => handleCategoryClick('Smart Watch')}>Smart Watch</button></li>
+                    <li className='hover:font-bold'><button onClick={() => handleCategoryClick('Camera')}>Camera</button></li>
+                    <li className='hover:font-bold'><button onClick={() => handleCategoryClick('Headphone')}>Headphone</button></li>
+                    <li className='hover:font-bold'><button onClick={() => handleCategoryClick('Gaming')}>Gaming</button></li>
                 </ul>
             </div>
 
