@@ -8,7 +8,7 @@ export const GET = async () => {
     try {
 
         const products = await productsCollection.find().toArray();
-        return Response.json({ products })
+        return Response.json( products )
 
     } catch (error) {
         console.log(error);
