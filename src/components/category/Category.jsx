@@ -33,37 +33,37 @@ const Category = () => {
                 </div>
             </div>
             <div className='py-6 md:py-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8'>
-                <div className='h-36 ' onClick={() => handleCategoryClick('phone')}>
+                <div className='h-36 ' onClick={() => handleCategoryClick('Phone')}>
                     <div className='border rounded flex flex-col items-center py-6 hover:bg-[#DB4444] hover:text-white transition duration-300 ease-in-out cursor-pointer'>
                         <CiMobile4 className='text-[56px]' />
                         <p>Phones</p>
                     </div>
                 </div>
-                <div className='h-36 ' onClick={() => handleCategoryClick('laptop')}>
+                <div className='h-36 ' onClick={() => handleCategoryClick('Laptop')}>
                     <div className='border rounded flex flex-col items-center py-6 hover:bg-[#DB4444] hover:text-white transition duration-300 ease-in-out cursor-pointer'>
                         <HiOutlineComputerDesktop className='text-[56px]' />
                         <p>Computer</p>
                     </div>
                 </div>
-                <div className='h-36 ' onClick={() => handleCategoryClick('smart-watch')}>
+                <div className='h-36 ' onClick={() => handleCategoryClick('Smart Watch')}>
                     <div className='border rounded flex flex-col items-center py-6 hover:bg-[#DB4444] hover:text-white transition duration-300 ease-in-out cursor-pointer'>
                         <TbDeviceWatchStats className='text-[56px]' />
                         <p>SmartWatch</p>
                     </div>
                 </div>
-                <div className='h-36 ' onClick={() => handleCategoryClick('camera')}>
+                <div className='h-36 ' onClick={() => handleCategoryClick('Camera')}>
                     <div className='border rounded flex flex-col items-center py-6 hover:bg-[#DB4444] hover:text-white transition duration-300 ease-in-out cursor-pointer'>
                         <IoCameraOutline className='text-[56px]' />
                         <p>Camera</p>
                     </div>
                 </div>
-                <div className='h-36 ' onClick={() => handleCategoryClick('headphone')}>
+                <div className='h-36 ' onClick={() => handleCategoryClick('Headphone')}>
                     <div className='border rounded flex flex-col items-center py-6 hover:bg-[#DB4444] hover:text-white transition duration-300 ease-in-out cursor-pointer'>
                         <CiHeadphones className='text-[56px]' />
                         <p>HeadPhones</p>
                     </div>
                 </div>
-                <div className='h-36 ' onClick={() => handleCategoryClick('gaming')}>
+                <div className='h-36 ' onClick={() => handleCategoryClick('Gaming')}>
                     <div className='border rounded flex flex-col items-center py-6 hover:bg-[#DB4444] hover:text-white transition duration-300 ease-in-out cursor-pointer'>
                         <LuGamepad className='text-[56px]' />
                         <p>Gaming</p>
