@@ -1,23 +1,24 @@
-import { useRouter } from "next/router";
+"use client"; // Make it a client component
+
+import { useParams } from "next/navigation"; // Use next/navigation in app directory
 import { useEffect, useState } from "react";
 
 const ProductDetails = () => {
-  const router = useRouter();
-  const { id } = router.query; // Get product id from URL
+  const { productId } = useParams(); // Get product id from URL
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    if (id) {
-      // Fetch product data based on the id from public/products.json
+    if (productId) {
+      // Fetch product data based on the productId from public/products.json
       fetch("/products.json")
         .then((response) => response.json())
         .then((data) => {
-          const selectedProduct = data.find((item) => item.id === parseInt(id));
+          const selectedProduct = data.find((item) => item.id === parseInt(productId));
           setProduct(selectedProduct);
         })
         .catch((error) => console.error("Error fetching product data:", error));
     }
-  }, [id]);
+  }, [productId]);
 
   if (!product) {
     return <div>Loading...</div>; // Loading state
@@ -33,15 +34,19 @@ const ProductDetails = () => {
 
           {/* Thumbnail carousel */}
           <div className="grid grid-cols-4 gap-2">
-            {product.gallery.map((img, index) => (
-              <img
-                key={index}
-                src={img}
-                alt={`Gallery image ${index}`}
-                className="w-full h-24 object-cover cursor-pointer hover:opacity-75"
-                onClick={() => setProduct((prev) => ({ ...prev, image: img }))}
-              />
-            ))}
+            {product.gallery && Array.isArray(product.gallery) ? (
+              product.gallery.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  alt={`Gallery image ${index}`}
+                  className="w-full h-24 object-cover cursor-pointer hover:opacity-75"
+                  onClick={() => setProduct((prev) => ({ ...prev, image: img }))}
+                />
+              ))
+            ) : (
+              <p>No additional images available.</p>
+            )}
           </div>
         </div>
       </div>
@@ -60,13 +65,17 @@ const ProductDetails = () => {
         <div className="mt-4">
           <p className="font-bold">Colours:</p>
           <div className="flex space-x-4">
-            {product.colors.map((color, index) => (
-              <span
-                key={index}
-                className="w-8 h-8 rounded-full border-2"
-                style={{ backgroundColor: color }}
-              ></span>
-            ))}
+            {product.colors && Array.isArray(product.colors) ? (
+              product.colors.map((color, index) => (
+                <span
+                  key={index}
+                  className="w-8 h-8 rounded-full border-2"
+                  style={{ backgroundColor: color }}
+                ></span>
+              ))
+            ) : (
+              <p>No color options available.</p>
+            )}
           </div>
         </div>
 

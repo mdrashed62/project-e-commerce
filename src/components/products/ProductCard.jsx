@@ -23,10 +23,10 @@ const ProductCard = ({ id, image, title, description, price, rating, onAddToCart
       </div>
       <div className="p-4">
         {/* Link to dynamic product details page */}
-        <Link href={`/products/${id}`}>
-          <h3 className="text-lg font-semibold cursor-pointer hover:underline">
+        <Link href={`/products/${id}`} legacyBehavior>
+          <a className="text-lg font-semibold cursor-pointer hover:underline">
             {title}
-          </h3>
+          </a>
         </Link>
         <p className="text-sm text-gray-500">{description}</p>
         <p className="mt-2 text-xl font-bold">${price}</p>
