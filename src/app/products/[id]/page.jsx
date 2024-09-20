@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const page = ({params}) => {
@@ -5,7 +6,7 @@ const page = ({params}) => {
     
     return (
         <div>
-            Product Details
+           <h1>Here will be show single product info</h1>
         </div>
     );
 };
