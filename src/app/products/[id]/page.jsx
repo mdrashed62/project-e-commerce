@@ -1,13 +1,12 @@
-import ProductDetails from '@/components/products/[id]/ProductDetails';
+
+
 import React from 'react';
 
 const page = ({params}) => {
-    console.log(params.id)
 
-    
     return (
         <div>
-            <ProductDetails></ProductDetails>
+           <h1>Here will be show single product info</h1>
         </div>
     );
 };
