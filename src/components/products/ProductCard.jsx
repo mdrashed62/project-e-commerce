@@ -34,11 +34,12 @@ const ProductCard = ({ _id, image, title, description, price, rating }) => {
           <FontAwesomeIcon icon={faEye} className="text-slate-800 text-lg" />
         </button>
       </div>
-      <div className="p-4 flex-grow">
-        <Link href={`/products/${_id}`}>
-          <h3 className="text-lg font-semibold cursor-pointer hover:underline">
+      <div className="p-4">
+        {/* Link to dynamic product details page */}
+        <Link href={`/products/${id}`} legacyBehavior>
+          <a className="text-lg font-semibold cursor-pointer hover:underline">
             {title}
-          </h3>
+          </a>
         </Link>
         <p className="text-sm text-gray-500">{description}</p>
         <p className="mt-2 text-xl font-bold">${price}</p>
