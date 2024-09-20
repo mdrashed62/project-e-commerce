@@ -36,10 +36,10 @@ const ProductCard = ({ _id, image, title, description, price, rating }) => {
       </div>
       <div className="p-4">
         {/* Link to dynamic product details page */}
-        <Link href={`/products/${id}`} legacyBehavior>
-          <a className="text-lg font-semibold cursor-pointer hover:underline">
+        <Link href={`/products/${_id}`} legacyBehavior>
+          <button className="text-lg font-semibold cursor-pointer hover:underline">
             {title}
-          </a>
+          </button>
         </Link>
         <p className="text-sm text-gray-500">{description}</p>
         <p className="mt-2 text-xl font-bold">${price}</p>
