@@ -1,12 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-const page = ({params}) => {
+const ProductDetails = ({params}) => {
+  return (
+    <div>
+      <h1>single product details</h1>
+    </div>
+  )
+}
 
-    return (
-        <div>
-           <h1>Here will be show single product info</h1>
-        </div>
-    );
-};
-
-export default page;
+export default ProductDetails

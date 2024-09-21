@@ -58,8 +58,6 @@ export default function Products() {
         ))}
       </div>
 
-
-
       <div className=" text-center w-full my-10">
         <Link href={'/shop'}><Button text={"View All"}></Button></Link>
       </div>
