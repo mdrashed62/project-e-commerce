@@ -1,54 +1,72 @@
-"use client"
+"use client";
 
 import React, { useEffect, useState } from "react";
-import ProductCard from "./ProductCard";
-import SectionHeading from "../shared/SectionHeading";
 import { IoArrowBack, IoArrowForward } from "react-icons/io5";
+import SectionHeading from "../shared/SectionHeading";
+import ProductCard from "./ProductCard";
+import { getProducts } from "@/utils/getProduct"; 
 
-const Products = () => {
+export default function Products() {
   const [products, setProducts] = useState([]);
+  const [visibleProducts, setVisibleProducts] = useState(12); 
 
+  
   useEffect(() => {
-    // Fetch product data from public/products.json
-    fetch("/products.json")
-      .then((response) => response.json())
-      .then((data) => setProducts(data))
-      .catch((error) => console.error("Error fetching product data:", error));
+    const fetchProducts = async () => {
+      const data = await getProducts();
+      setProducts(data);
+    };
+    fetchProducts();
   }, []);
 
-  const handleAddToCart = (productTitle) => {
-    alert(`${productTitle} added to cart!`);
+
+  const handleShowAllProducts = () => {
+    setVisibleProducts(products.length);
   };
 
   return (
-    <div className="container mx-auto py-20">
-       <div className='flex justify-between items-center'>
-                <SectionHeading heading={'Explore Our Products'} subHeading={`Our Products`}></SectionHeading>
-                <div className='flex items-center gap-2'>
-                    <button className='bg-[#f5f2f2] rounded-full w-12 h-12'>
-                        <IoArrowBack className='text-2xl mx-auto' />
-                    </button>
-                    <button className='bg-[#f5f2f2] rounded-full w-12 h-12'>
-                        <IoArrowForward className='text-2xl mx-auto' />
-                    </button>
-                </div>
-            </div>
-     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 py-10">
-      {products.map((product) => (
-        <ProductCard
-          key={product.id}
-          image={product.image}
-          title={product.title}
-          description={product.description}
-          price={product.price}
-          rating={product.rating}
-          onAddToCart={() => handleAddToCart(product.title)}
+    <div>
+      <div className="flex justify-between items-center">
+        <SectionHeading
+          heading={"Explore Our Products"}
+          subHeading={`Our Products`}
         />
-      ))}
+        <div className="flex items-center gap-2">
+          <button className="bg-[#f5f2f2] rounded-full w-12 h-12">
+            <IoArrowBack className="text-2xl mx-auto" />
+          </button>
+          <button className="bg-[#f5f2f2] rounded-full w-12 h-12">
+            <IoArrowForward className="text-2xl mx-auto" />
+          </button>
+        </div>
       </div>
+
+      {/* Product Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 pt-10">
+        {products.slice(0, visibleProducts).map((product) => (
+          <ProductCard
+            key={product._id}
+            _id={product._id}
+            image={product.image}
+            title={product.title}
+            description={product.description}
+            price={product.price}
+            rating={product.rating}
+          />
+        ))}
+      </div>
+
+      {/* "See All Products" Button */}
+      {visibleProducts < products.length && (
+        <div className="bg-[#DB4444] text-center w-full lg:w-1/2 mt-2 mb-10 rounded-sm mx-auto hover:bg-black">
+          <button 
+            className="px-4 py-2 text-white" 
+            onClick={handleShowAllProducts}
+          >
+            See All Products
+          </button>
+        </div>
+      )}
     </div>
-
   );
-};
-
-export default Products;
+}

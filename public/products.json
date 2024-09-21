@@ -1,99 +1,592 @@
 [
-    {
-      "id": 1,
-      "image": "https://i.ibb.co/31QsXzG/camera.png",
-      "title": "High-Resolution Camera",
-      "description": "Capture stunning photos with this high-quality camera.",
-      "price": 299.99,
-      "rating": 4.8
-    },
-    {
-      "id": 2,
-      "image": "https://i.ibb.co/k9DHRFk/chair.png",
-      "title": "Ergonomic Office Chair",
-      "description": "Stay comfortable all day with this ergonomic chair.",
-      "price": 149.99,
-      "rating": 4.5
-    },
-    {
-      "id": 3,
-      "image": "https://i.ibb.co/7YPFHLN/cooler.png",
-      "title": "Portable Air Cooler",
-      "description": "Keep cool during hot days with this portable cooler.",
-      "price": 79.99,
-      "rating": 4.6
-    },
-    {
-      "id": 4,
-      "image": "https://i.ibb.co/jgT0D9L/gaming-console.png",
-      "title": "Gaming Console",
-      "description": "Experience next-gen gaming with this powerful console.",
-      "price": 499.99,
-      "rating": 4.9
-    },
-    {
-      "id": 5,
-      "image": "https://i.ibb.co/Sr87z8w/jacket.png",
-      "title": "Winter Jacket",
-      "description": "Stay warm and stylish with this insulated winter jacket.",
-      "price": 199.99,
-      "rating": 4.7
-    },
-    {
-      "id": 6,
-      "image": "https://i.ibb.co/Dz7pJDX/keyboard.png",
-      "title": "Mechanical Keyboard",
-      "description": "Enhance your typing experience with this mechanical keyboard.",
-      "price": 89.99,
-      "rating": 4.8
-    },
-    {
-      "id": 7,
-      "image": "https://i.ibb.co/QbDJHw8/laptop.png",
-      "title": "High-Performance Laptop",
-      "description": "Boost productivity with this high-performance laptop.",
-      "price": 999.99,
-      "rating": 4.9
-    },
-    {
-      "id": 8,
-      "image": "https://i.ibb.co/kDvxH92/perfuim.png",
-      "title": "Luxury Perfume",
-      "description": "Feel confident with this exquisite luxury perfume.",
-      "price": 59.99,
-      "rating": 4.6
-    },
-    {
-      "id": 9,
-      "image": "https://i.ibb.co/Swkpj7B/shoes.png",
-      "title": "Running Shoes",
-      "description": "Stay comfortable and stylish while running with these shoes.",
-      "price": 129.99,
-      "rating": 4.7
-    },
-    {
-      "id": 10,
-      "image": "https://i.ibb.co/ynf5Vpj/soud-sytem.png",
-      "title": "Surround Sound System",
-      "description": "Enjoy immersive sound with this high-quality surround system.",
-      "price": 299.99,
-      "rating": 4.8
-    },
-    {
-      "id": 11,
-      "image": "https://i.ibb.co/6wz6VYy/toy-car.png",
-      "title": "Remote Control Toy Car",
-      "description": "Fun for kids and adults alike with this remote-controlled car.",
-      "price": 49.99,
-      "rating": 4.5
-    },
-    {
-      "id": 12,
-      "image": "https://i.ibb.co/VYSbPJ2/bag.png",
-      "title": "Travel Backpack",
-      "description": "Carry your essentials in style with this durable backpack.",
-      "price": 89.99,
-      "rating": 4.6
-    }
-  ]
-  
+  {
+    "image": "https://i.ibb.co/com/3dnMdY9/camera-2.png",
+    "title": "Ultra HD Camera X200",
+    "category": "Camera",
+    "description": "Capture stunning high-definition images with the Ultra HD Camera X200. Perfect for both professionals and enthusiasts.",
+    "price": 799.99,
+    "rating": 4.8,
+    "brand": "ProVision",
+    "launchDate": "2023-01-12"
+  },
+  {
+    "image": "https://i.ibb.co/com/dpXKr0W/camera-9.webp",
+    "title": "Compact Zoom Camera Z500",
+    "category": "Camera",
+    "description": "The Compact Zoom Camera Z500 offers incredible zoom capabilities in a sleek, portable design. Ideal for travel and outdoor photography.",
+    "price": 699.99,
+    "rating": 4.7,
+    "brand": "SnapElite",
+    "launchDate": "2023-02-18"
+  },
+  {
+    "image": "https://i.ibb.co/com/nbKwMMT/camera-11.webp",
+    "title": "Professional DSLR 2023",
+    "category": "Camera",
+    "description": "Experience professional-grade photography with the DSLR 2023. Advanced features and high-resolution capabilities for the perfect shot.",
+    "price": 1199.99,
+    "rating": 4.9,
+    "brand": "Visionary",
+    "launchDate": "2023-03-22"
+  },
+  {
+    "image": "https://i.ibb.co/com/YyFXzGD/camera-12.webp",
+    "title": "4K Action Camera V6",
+    "category": "Camera",
+    "description": "Capture your adventures in stunning 4K with the Action Camera V6. Built for durability and high-quality video recording.",
+    "price": 499.99,
+    "rating": 4.6,
+    "brand": "AdventurePro",
+    "launchDate": "2023-04-10"
+  },
+  {
+    "image": "https://i.ibb.co/com/f0GZ7Fb/camera-14.webp",
+    "title": "High-Speed Camera R300",
+    "category": "Camera",
+    "description": "The High-Speed Camera R300 is designed for fast-paced action shots with exceptional clarity and speed.",
+    "price": 649.99,
+    "rating": 4.8,
+    "brand": "SpeedShot",
+    "launchDate": "2023-05-15"
+  },
+  {
+    "image": "https://i.ibb.co/com/rtFN17Q/camera-15.webp",
+    "title": "Smart Mirror Camera Pro",
+    "category": "Camera",
+    "description": "A revolutionary camera with a built-in smart mirror function. Perfect for selfies and high-quality portraits.",
+    "price": 799.99,
+    "rating": 4.7,
+    "brand": "Reflecta",
+    "launchDate": "2023-06-20"
+  },
+  {
+    "image": "https://i.ibb.co/com/ypDwd2q/camera.jpg",
+    "title": "All-in-One Camera F10",
+    "category": "Camera",
+    "description": "The All-in-One Camera F10 combines functionality and ease of use with advanced shooting modes and a sleek design.",
+    "price": 599.99,
+    "rating": 4.5,
+    "brand": "FusionTech",
+    "launchDate": "2023-07-05"
+  },
+  {
+    "image": "https://i.ibb.co/com/HznSXVF/camera.png",
+    "title": "Elegant Point & Shoot 8X",
+    "category": "Camera",
+    "description": "Compact and stylish, the Elegant Point & Shoot 8X is perfect for everyday photography and casual use.",
+    "price": 399.99,
+    "rating": 4.4,
+    "brand": "Elegance",
+    "launchDate": "2023-08-10"
+  },
+  {
+    "image": "https://i.ibb.co/com/6WQW3Hk/camera.webp",
+    "title": "ZoomMaster Pro 10X",
+    "category": "Camera",
+    "description": "The ZoomMaster Pro 10X offers exceptional zoom capabilities and image quality for detailed shots from a distance.",
+    "price": 729.99,
+    "rating": 4.6,
+    "brand": "MasterView",
+    "launchDate": "2023-09-18"
+  },
+  {
+    "image": "https://i.ibb.co/com/ydK5fjt/brave-7-01-228x228.jpg",
+    "title": "Brave 7 Action Cam",
+    "category": "Camera",
+    "description": "Capture your extreme adventures with the Brave 7 Action Cam, featuring rugged design and high-resolution recording.",
+    "price": 549.99,
+    "rating": 4.7,
+    "brand": "BraveShot",
+    "launchDate": "2023-10-22"
+  },
+  {
+    "image": "https://i.ibb.co/com/SNgqny0/laptop-1.webp",
+    "title": "UltraBook X1",
+    "category": "Laptop",
+    "description": "The UltraBook X1 combines power and portability with a sleek design and high-performance specs for professionals on the go.",
+    "price": 1399.99,
+    "rating": 4.8,
+    "brand": "TechElite",
+    "launchDate": "2023-01-20"
+  },
+  {
+    "image": "https://i.ibb.co/com/PZ7mkMz/laptop-2.webp",
+    "title": "Gaming Laptop Z7",
+    "category": "Laptop",
+    "description": "The Gaming Laptop Z7 delivers top-tier gaming performance with advanced graphics and high-speed processors.",
+    "price": 1599.99,
+    "rating": 4.9,
+    "brand": "GamePro",
+    "launchDate": "2023-02-15"
+  },
+  {
+    "image": "https://i.ibb.co/com/4VcY3Z8/laptop-3.webp",
+    "title": "Business Elite 14",
+    "category": "Laptop",
+    "description": "Designed for business professionals, the Business Elite 14 offers powerful performance, a sleek design, and robust security features.",
+    "price": 1299.99,
+    "rating": 4.7,
+    "brand": "BizTech",
+    "launchDate": "2023-03-25"
+  },
+  {
+    "image": "https://i.ibb.co/com/YbYj8FZ/laptop-4.webp",
+    "title": "Creative Studio Pro",
+    "category": "Laptop",
+    "description": "Ideal for creative professionals, the Creative Studio Pro provides stunning display quality and powerful specs for design and video editing.",
+    "price": 1499.99,
+    "rating": 4.8,
+    "brand": "CreativeHub",
+    "launchDate": "2023-04-30"
+  },
+  {
+    "image": "https://i.ibb.co/com/8mDYhrJ/laptop-5.webp",
+    "title": "Lightweight WorkMate",
+    "category": "Laptop",
+    "description": "The Lightweight WorkMate is perfect for students and casual users who need a dependable laptop for everyday tasks.",
+    "price": 899.99,
+    "rating": 4.5,
+    "brand": "WorkPlus",
+    "launchDate": "2023-05-20"
+  },
+  {
+    "image": "https://i.ibb.co/com/FsJYKQP/laptop-6.webp",
+    "title": "All-Day Performer",
+    "category": "Laptop",
+    "description": "With exceptional battery life and performance, the All-Day Performer is designed to keep you productive throughout the day.",
+    "price": 1099.99,
+    "rating": 4.6,
+    "brand": "DayTech",
+    "launchDate": "2023-06-15"
+  },
+  {
+    "image": "https://i.ibb.co/com/gz9K3qX/laptop-7.webp",
+    "title": "High-Performance Xtreme",
+    "category": "Laptop",
+    "description": "The High-Performance Xtreme is engineered for gamers and power users with top-notch hardware and cutting-edge technology.",
+    "price": 1799.99,
+    "rating": 4.9,
+    "brand": "XtremeGear",
+    "launchDate": "2023-07-22"
+  },
+  {
+    "image": "https://i.ibb.co/com/6By58Tp/laptop-8.webp",
+    "title": "Elegant ProBook 15",
+    "category": "Laptop",
+    "description": "The Elegant ProBook 15 offers a sophisticated design and powerful performance, making it a perfect choice for professionals.",
+    "price": 1399.99,
+    "rating": 4.7,
+    "brand": "ProElite",
+    "launchDate": "2023-08-18"
+  },
+  {
+    "image": "https://i.ibb.co/com/ZBfRth4/laptop-9.webp",
+    "title": "Ultra-Slim Laptop X",
+    "category": "Laptop",
+    "description": "The Ultra-Slim Laptop X is designed for maximum portability without compromising on performance, ideal for on-the-go users.",
+    "price": 1199.99,
+    "rating": 4.6,
+    "brand": "SlimTech",
+    "launchDate": "2023-09-25"
+  },
+  {
+    "image": "https://i.ibb.co/com/pzbb0pR/laptop-1.jpg",
+    "title": "Power Laptop Pro",
+    "category": "Laptop",
+    "description": "A powerhouse laptop with high-speed processing and exceptional graphics, perfect for demanding tasks and gaming.",
+    "price": 1599.99,
+    "rating": 4.8,
+    "brand": "PowerPro",
+    "launchDate": "2023-10-30"
+  },
+  {
+    "image": "https://i.ibb.co/com/vwfGB2k/headphone-1.jpg",
+    "title": "Noise-Cancelling Headphones NX",
+    "category": "Headphone",
+    "description": "Experience immersive sound with the Noise-Cancelling Headphones NX. Perfect for music lovers and frequent travelers.",
+    "price": 249.99,
+    "rating": 4.9,
+    "brand": "SoundElite",
+    "launchDate": "2023-01-10"
+  },
+  {
+    "image": "https://i.ibb.co/com/BwJbz2G/headphone-2.jpg",
+    "title": "Wireless Stereo Headphones",
+    "category": "Headphone",
+    "description": "Enjoy wireless freedom and high-quality audio with the Wireless Stereo Headphones. Ideal for everyday use and workouts.",
+    "price": 199.99,
+    "rating": 4.7,
+    "brand": "WaveSound",
+    "launchDate": "2023-02-12"
+  },
+  {
+    "image": "https://i.ibb.co/com/6rY2GfS/headphone-3.jpg",
+    "title": "Premium Noise-Cancelling Pro",
+    "category": "Headphone",
+    "description": "The Premium Noise-Cancelling Pro delivers exceptional sound quality and active noise cancellation for a superior listening experience.",
+    "price": 299.99,
+    "rating": 4.8,
+    "brand": "EliteAudio",
+    "launchDate": "2023-03-20"
+  },
+  {
+    "image": "https://i.ibb.co/com/Mn7M0T4/headphone-4.jpg",
+    "title": "Comfort Fit Headphones",
+    "category": "Headphone",
+    "description": "Designed for all-day wear, the Comfort Fit Headphones provide excellent sound quality and a snug, comfortable fit.",
+    "price": 179.99,
+    "rating": 4.6,
+    "brand": "ComfySound",
+    "launchDate": "2023-04-25"
+  },
+  {
+    "image": "https://i.ibb.co/com/cx03c4h/headphone-5.jpg",
+    "title": "High-Fidelity Audio Headphones",
+    "category": "Headphone",
+    "description": "Immerse yourself in high-fidelity sound with these Audio Headphones, crafted for audiophiles and music enthusiasts.",
+    "price": 229.99,
+    "rating": 4.8,
+    "brand": "FidelityPro",
+    "launchDate": "2023-05-30"
+  },
+  {
+    "image": "https://i.ibb.co/com/5TtnBnz/headphone-6.jpg",
+    "title": "Sport Wireless Earbuds",
+    "category": "Headphone",
+    "description": "Perfect for workouts, the Sport Wireless Earbuds offer secure fit and sweat resistance with premium sound quality.",
+    "price": 149.99,
+    "rating": 4.5,
+    "brand": "SportSound",
+    "launchDate": "2023-06-10"
+  },
+  {
+    "image": "https://i.ibb.co/com/phnRK5G/headphone-7.jpg",
+    "title": "Bluetooth Headphones V3",
+    "category": "Headphone",
+    "description": "The Bluetooth Headphones V3 provide a wireless audio experience with high-quality sound and long-lasting battery life.",
+    "price": 159.99,
+    "rating": 4.6,
+    "brand": "BlueWave",
+    "launchDate": "2023-07-15"
+  },
+  {
+    "image": "https://i.ibb.co/com/L5yGhsC/headphone-8.jpg",
+    "title": "Studio Monitoring Headphones",
+    "category": "Headphone",
+    "description": "Studio Monitoring Headphones are designed for professional audio work, offering accurate sound reproduction and comfort.",
+    "price": 269.99,
+    "rating": 4.7,
+    "brand": "StudioMaster",
+    "launchDate": "2023-08-20"
+  },
+  {
+    "image": "https://i.ibb.co/com/VHcdqjf/headphone-9.jpg",
+    "title": "Noise-Isolating Earphones",
+    "category": "Headphone",
+    "description": "Experience crystal-clear sound with the Noise-Isolating Earphones, perfect for on-the-go listening with excellent noise isolation.",
+    "price": 129.99,
+    "rating": 4.5,
+    "brand": "IsoSound",
+    "launchDate": "2023-09-25"
+  },
+  {
+    "image": "https://i.ibb.co/com/sC9nVhK/headphone-10.jpg",
+    "title": "Luxury Over-Ear Headphones",
+    "category": "Headphone",
+    "description": "The Luxury Over-Ear Headphones offer premium sound quality and luxurious comfort for an unparalleled listening experience.",
+    "price": 349.99,
+    "rating": 4.9,
+    "brand": "LuxAudio",
+    "launchDate": "2023-10-30"
+  },
+  {
+    "image": "https://i.ibb.co/com/GnM4MNX/smart-watch-1.jpg",
+    "title": "Smart Watch X100",
+    "category": "Smart Watch",
+    "description": "The Smart Watch X100 combines advanced health tracking features with a sleek design, perfect for everyday use.",
+    "price": 199.99,
+    "rating": 4.8,
+    "brand": "SmartPulse",
+    "launchDate": "2023-01-15"
+  },
+  {
+    "image": "https://i.ibb.co/com/vkRvsqg/smart-watch-2.jpg",
+    "title": "Fitness Pro Watch",
+    "category": "Smart Watch",
+    "description": "Track your fitness goals with the Fitness Pro Watch, featuring multiple workout modes and real-time health monitoring.",
+    "price": 179.99,
+    "rating": 4.7,
+    "brand": "FitTrack",
+    "launchDate": "2023-02-20"
+  },
+  {
+    "image": "https://i.ibb.co/com/Yp2gNfd/smart-watch-3.jpg",
+    "title": "Elegant Smart Watch 5",
+    "category": "Smart Watch",
+    "description": "Stylish and functional, the Elegant Smart Watch 5 offers a blend of advanced features and timeless design.",
+    "price": 229.99,
+    "rating": 4.8,
+    "brand": "EleganceTech",
+    "launchDate": "2023-03-18"
+  },
+  {
+    "image": "https://i.ibb.co/com/chm0LNz/smart-watch-4.jpg",
+    "title": "Health Monitor Watch Pro",
+    "category": "Smart Watch",
+    "description": "Stay on top of your health with the Health Monitor Watch Pro, featuring comprehensive health tracking and smart notifications.",
+    "price": 249.99,
+    "rating": 4.7,
+    "brand": "HealthWatch",
+    "launchDate": "2023-04-25"
+  },
+  {
+    "image": "https://i.ibb.co/com/YkD2SPf/smart-watch-5.jpg",
+    "title": "Advanced Sports Watch",
+    "category": "Smart Watch",
+    "description": "The Advanced Sports Watch is designed for athletes, offering advanced tracking features and durable design for intense workouts.",
+    "price": 299.99,
+    "rating": 4.9,
+    "brand": "SportElite",
+    "launchDate": "2023-05-30"
+  },
+  {
+    "image": "https://i.ibb.co/com/VWnWS2c/smart-watch-6.jpg",
+    "title": "Luxury Fitness Watch",
+    "category": "Smart Watch",
+    "description": "Combining luxury with functionality, the Luxury Fitness Watch provides high-end features and a sophisticated design.",
+    "price": 349.99,
+    "rating": 4.8,
+    "brand": "LuxFit",
+    "launchDate": "2023-06-15"
+  },
+  {
+    "image": "https://i.ibb.co/com/GcFTYcq/smart-watch-7.jpg",
+    "title": "TechSmart Pro Watch",
+    "category": "Smart Watch",
+    "description": "The TechSmart Pro Watch offers cutting-edge technology and sleek design, perfect for tech enthusiasts and professionals.",
+    "price": 219.99,
+    "rating": 4.6,
+    "brand": "TechElite",
+    "launchDate": "2023-07-20"
+  },
+  {
+    "image": "https://i.ibb.co/com/2hJ6v4V/smart-watch-8.jpg",
+    "title": "Smart Watch for Professionals",
+    "category": "Smart Watch",
+    "description": "The Smart Watch for Professionals combines functionality with a professional look, ideal for business and everyday use.",
+    "price": 189.99,
+    "rating": 4.7,
+    "brand": "ProSmart",
+    "launchDate": "2023-08-25"
+  },
+  {
+    "image": "https://i.ibb.co/com/Z09c3fR/smart-watch-9.jpg",
+    "title": "Lifestyle Smart Watch",
+    "category": "Smart Watch",
+    "description": "The Lifestyle Smart Watch is designed for a modern lifestyle, offering essential features and a stylish appearance.",
+    "price": 169.99,
+    "rating": 4.5,
+    "brand": "LifeTech",
+    "launchDate": "2023-09-30"
+  },
+  {
+    "image": "https://i.ibb.co/rcprHF2/phone-1.jpg",
+    "title": "Smartphone X1",
+    "category": "Phone",
+    "description": "The Smartphone X1 offers a sleek design with cutting-edge technology for seamless performance and high-quality images.",
+    "price": 699.99,
+    "rating": 4.5,
+    "brand": "TechBrand",
+    "launchDate": "2023-03-10"
+  },
+  {
+    "image": "https://i.ibb.co/CP57ZLx/phone-2.jpg",
+    "title": "Smartphone Pro Max",
+    "category": "Phone",
+    "description": "Experience the ultimate power and performance with the Smartphone Pro Max, featuring a high-speed processor and stunning display.",
+    "price": 899.99,
+    "rating": 4.7,
+    "brand": "TechBrand",
+    "launchDate": "2023-05-12"
+  },
+  {
+    "image": "https://i.ibb.co/4jzD3kn/phone-3.jpg",
+    "title": "Smartphone Z5",
+    "category": "Phone",
+    "description": "The Smartphone Z5 delivers a smooth user experience with enhanced camera quality and long battery life.",
+    "price": 799.99,
+    "rating": 4.6,
+    "brand": "Innovate",
+    "launchDate": "2023-02-15"
+  },
+  {
+    "image": "https://i.ibb.co/N2JWVPD/phone-4.jpg",
+    "title": "Smartphone Lite 10",
+    "category": "Phone",
+    "description": "The Smartphone Lite 10 is compact, lightweight, and packed with features, making it ideal for users on the go.",
+    "price": 599.99,
+    "rating": 4.3,
+    "brand": "Innovate",
+    "launchDate": "2023-06-18"
+  },
+  {
+    "image": "https://i.ibb.co/mb6fbSd/phone-5.jpg",
+    "title": "Smartphone Ultra",
+    "category": "Phone",
+    "description": "The Smartphone Ultra redefines excellence with its ultra-fast processor and professional-grade camera.",
+    "price": 999.99,
+    "rating": 4.9,
+    "brand": "EliteTech",
+    "launchDate": "2023-01-25"
+  },
+  {
+    "image": "https://i.ibb.co/djyqcDd/phone-6.jpg",
+    "title": "Smartphone Mini",
+    "category": "Phone",
+    "description": "A powerful yet compact Smartphone Mini designed for efficiency and convenience in everyday use.",
+    "price": 499.99,
+    "rating": 4.4,
+    "brand": "TechBrand",
+    "launchDate": "2023-04-05"
+  },
+  {
+    "image": "https://i.ibb.co/ys3cTWL/phone-7.jpg",
+    "title": "Smartphone V10",
+    "category": "Phone",
+    "description": "A versatile and affordable Smartphone V10 with great battery life and smooth functionality.",
+    "price": 549.99,
+    "rating": 4.2,
+    "brand": "MobileTech",
+    "launchDate": "2023-07-10"
+  },
+  {
+    "image": "https://i.ibb.co/xH2mw0T/phone-8.jpg",
+    "title": "Smartphone Flex",
+    "category": "Phone",
+    "description": "The Smartphone Flex offers a foldable design with cutting-edge features, ensuring flexibility and high performance.",
+    "price": 1099.99,
+    "rating": 4.8,
+    "brand": "TechBrand",
+    "launchDate": "2023-03-20"
+  },
+  {
+    "image": "https://i.ibb.co/wJjwDtQ/phone-9.jpg",
+    "title": "Smartphone Max Vision",
+    "category": "Phone",
+    "description": "A high-resolution Smartphone Max Vision that delivers exceptional viewing experiences with its expansive screen.",
+    "price": 899.99,
+    "rating": 4.6,
+    "brand": "EliteTech",
+    "launchDate": "2023-02-28"
+  },
+  {
+    "image": "https://i.ibb.co/XXHsSYJ/phone-10.jpg",
+    "title": "Smartphone Pixel Zoom",
+    "category": "Phone",
+    "description": "The Smartphone Pixel Zoom is designed for photography enthusiasts, featuring a powerful zoom lens and superior image quality.",
+    "price": 949.99,
+    "rating": 4.9,
+    "brand": "PixelPro",
+    "launchDate": "2023-06-01"
+  },
+  {
+    "image": "https://i.ibb.co/WDsHY2T/Gaming-3.jpg",
+    "title": "Gaming Console Alpha",
+    "category": "Gaming",
+    "description": "The Gaming Console Alpha delivers top-tier performance with advanced gaming capabilities and seamless online play.",
+    "price": 499.99,
+    "rating": 4.7,
+    "brand": "GameForce",
+    "launchDate": "2023-05-10"
+  },
+  {
+    "image": "https://i.ibb.co/kMfBRvx/Gaming-3.webp",
+    "title": "Gaming Console S1",
+    "category": "Gaming",
+    "description": "The Gaming Console S1 is compact and powerful, offering a rich gaming experience with immersive graphics.",
+    "price": 399.99,
+    "rating": 4.5,
+    "brand": "GameMaster",
+    "launchDate": "2023-02-12"
+  },
+  {
+    "image": "https://i.ibb.co/8dxRf2d/Gaming-4.jpg",
+    "title": "Gaming Console Pro X",
+    "category": "Gaming",
+    "description": "The ultimate gaming console for professionals, featuring high-speed processing and 4K graphics support.",
+    "price": 599.99,
+    "rating": 4.9,
+    "brand": "XGamer",
+    "launchDate": "2023-08-22"
+  },
+  {
+    "image": "https://i.ibb.co/1m6mdkG/Gaming-4.webp",
+    "title": "Gaming Console Lite",
+    "category": "Gaming",
+    "description": "A budget-friendly gaming console with great performance for casual gamers.",
+    "price": 299.99,
+    "rating": 4.3,
+    "brand": "GameTech",
+    "launchDate": "2023-07-15"
+  },
+  {
+    "image": "https://i.ibb.co/DLD4Jm8/Gaming-5.jpg",
+    "title": "Gaming Console Elite",
+    "category": "Gaming",
+    "description": "For the elite gamers, the Gaming Console Elite provides unrivaled performance with VR support and 8K graphics.",
+    "price": 699.99,
+    "rating": 4.9,
+    "brand": "XGamer",
+    "launchDate": "2023-04-30"
+  },
+  {
+    "image": "https://i.ibb.co/ckYMww0/gaming-console.png",
+    "title": "Gaming Console Z1",
+    "category": "Gaming",
+    "description": "The Gaming Console Z1 combines powerful processing with an affordable price, offering a great gaming experience for all.",
+    "price": 349.99,
+    "rating": 4.4,
+    "brand": "GameForce",
+    "launchDate": "2023-03-19"
+  },
+  {
+    "image": "https://i.ibb.co/XpnRx88/gaming-console.webp",
+    "title": "Gaming Console Flex",
+    "category": "Gaming",
+    "description": "The Gaming Console Flex offers a foldable design with mobile and desktop gaming modes for a versatile experience.",
+    "price": 549.99,
+    "rating": 4.6,
+    "brand": "GameMaster",
+    "launchDate": "2023-01-27"
+  },
+  {
+    "image": "https://i.ibb.co/30nbxD7/new-gaming.jpg",
+    "title": "Gaming Console VR Pro",
+    "category": "Gaming",
+    "description": "Step into virtual reality with the Gaming Console VR Pro, designed for immersive and realistic gaming experiences.",
+    "price": 799.99,
+    "rating": 4.8,
+    "brand": "XGamer",
+    "launchDate": "2023-06-18"
+  },
+  {
+    "image": "https://i.ibb.co/Pt887gb/Gaming-1.jpg",
+    "title": "Gaming Console X",
+    "category": "Gaming",
+    "description": "The Gaming Console X delivers high-definition gaming with a robust processor and dynamic graphics support.",
+    "price": 499.99,
+    "rating": 4.7,
+    "brand": "GameForce",
+    "launchDate": "2023-05-09"
+  },
+  {
+    "image": "https://i.ibb.co/XthBCGt/Gaming-2.webp",
+    "title": "Gaming Console Max",
+    "category": "Gaming",
+    "description": "The Gaming Console Max offers ultimate performance with support for the latest AAA titles and high-speed online play.",
+    "price": 649.99,
+    "rating": 4.9,
+    "brand": "XGamer",
+    "launchDate": "2023-02-16"
+  }
+]

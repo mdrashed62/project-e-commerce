@@ -1,10 +1,9 @@
 import React from 'react';
 
-const page = ({params}) => {
-
+const page = () => {
     return (
         <div>
-           <h1>Here will be show single product info</h1>
+            All orders
         </div>
     );
 };
