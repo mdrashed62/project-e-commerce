@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SectionHeading = ({heading, subHeading}) => {
+const SectionHeading = ({ heading, subHeading }) => {
     return (
         <div className='space-y-5'>
             <div className='flex items-center justify-start gap-3'>
