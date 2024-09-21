@@ -5,6 +5,7 @@ import ProductCard from "./ProductCard";
 import SectionHeading from "../shared/SectionHeading";
 import { IoArrowBack, IoArrowForward } from "react-icons/io5";
 import Button from "../shared/Button";
+import Link from "next/link";
 
 const FlashSaleProducts = () => {
   const [products, setProducts] = useState([]);
@@ -50,7 +51,7 @@ const FlashSaleProducts = () => {
         ))}
       </div>
         <div className="flex justify-center mt-3">
-          <Button text={"View All"}></Button>
+          <Link href={'/shop'}><Button text={"View All"}></Button></Link>
         </div>
     </div>
   );
