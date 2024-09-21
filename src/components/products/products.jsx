@@ -4,13 +4,15 @@ import React, { useEffect, useState } from "react";
 import { IoArrowBack, IoArrowForward } from "react-icons/io5";
 import SectionHeading from "../shared/SectionHeading";
 import ProductCard from "./ProductCard";
-import { getProducts } from "@/utils/getProduct"; 
+import { getProducts } from "@/utils/getProduct";
+import Link from "next/link";
+import Button from "../shared/Button";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
-  const [visibleProducts, setVisibleProducts] = useState(12); 
+  const [visibleProducts, setVisibleProducts] = useState(8);
 
-  
+
   useEffect(() => {
     const fetchProducts = async () => {
       const data = await getProducts();
@@ -56,17 +58,9 @@ export default function Products() {
         ))}
       </div>
 
-      {/* "See All Products" Button */}
-      {visibleProducts < products.length && (
-        <div className="bg-[#DB4444] text-center w-full lg:w-1/4 mt-2 mb-10 rounded-sm mx-auto hover:bg-black">
-          <button 
-            className="px-4 py-2 text-white" 
-            onClick={handleShowAllProducts}
-          >
-            See All Products
-          </button>
-        </div>
-      )}
+      <div className=" text-center w-full my-10">
+        <Link href={'/shop'}><Button text={"View All"}></Button></Link>
+      </div>
     </div>
   );
 }
